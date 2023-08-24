@@ -1,0 +1,98 @@
+// document.addEventListener("DOMContentLoaded", function () {
+//   const summaryBtn = document.getElementById("summaryBtn");
+//   const majorPointsBtn = document.getElementById("majorPointsBtn");
+//   const resultDiv = document.getElementById("result");
+
+//   summaryBtn.addEventListener("click", async () => {
+//     const summary = await getSummary();
+//     resultDiv.innerText = summary;
+//   });
+
+//   majorPointsBtn.addEventListener("click", async () => {
+//     const majorPoints = await getMajorPoints();
+//     resultDiv.innerText = majorPoints;
+    
+//   });
+
+
+
+
+
+
+
+// // Extracting webpage content.
+
+//   async function extractContent() {
+//     const headings = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6')).map(heading => heading.textContent.trim());
+//     const paragraphs = Array.from(document.querySelectorAll('p')).map(paragraph => paragraph.textContent.trim());
+  
+//     const extractedContent = `Headings:\n${headings.join('\n')}\n\nParagraphs:\n${paragraphs.join('\n')}`;
+  
+//     return JSON.stringify(extractedContent);
+    
+//   }
+
+
+// // ChatGPT API.d
+  
+//   const apiKey = 'API_KEY_HERE';
+//   const model = 'gpt-3.5-turbo';
+
+//   async function sendMessageToChatGPT(customInput, fileContent) {
+//     const apiUrl = `https://api.openai.com/v1/chat/completions`;
+  
+//     const response = await fetch(apiUrl, {
+//       method: 'POST',
+//       headers: {
+//         'Content-Type': 'application/json',
+//         'Authorization': `Bearer ${apiKey}`
+//       },
+//       body: JSON.stringify({
+//         model,
+//         messages: [
+//           { role: 'system', content: 'You are a helpful assistant that transfers data.' },
+//           { role: 'user', content: customInput },
+//           { role: 'user', content: fileContent }
+//         ]
+//       })
+//     });
+  
+//     const responseBody = await response.json();
+//     return responseBody.choices[0].message.content;
+//   }
+  
+ 
+// //  Function to display summary.
+// async function getSummary() {
+//   try {
+//     const customInput = "Summarize The following in appropriate headings and sentences for better understanding.";
+//     const fileContent = await extractContent();
+//     const generatedResponse = await sendMessageToChatGPT(customInput, fileContent);
+//     return generatedResponse;
+//   } catch (error) {
+//     console.error('Error:', error);
+//     throw error; // Rethrow the error to handle it in the caller
+//   }
+// }
+
+// (async () => {
+//   try {
+//     const summary = await getSummary();
+//     console.log('Generated Summary:', summary);
+//   } catch (error) {
+//     console.error('Error:', error);
+//   }
+// })();
+
+
+// // Function to display majorPoints content.
+//   async function getMajorPoints() {
+//     // In a real implementation, this function would extract major points from the page
+//     // For now, let's return a sample text
+
+    
+//     const majorPoints = await extractContent();
+//     return majorPoints;
+
+// }
+// });

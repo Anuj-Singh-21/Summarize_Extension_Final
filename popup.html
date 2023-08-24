@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Web Analysis Extension</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    
+    h1 {
+      color: #333;
+      text-align: center;
+      padding: 10px;
+      margin-bottom: 15px;
+    }
+    
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    
+    button:hover {
+      background-color: #0056b3;
+    }
+    
+    #result {
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.1);
+      margin: 20px auto;
+      max-width: 600px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Summarizer</h1>
+  <button id="summaryBtn">Provide Summary</button>
+  <button id="majorPointsBtn">Provide Major Points</button>
+  <div id="result"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
